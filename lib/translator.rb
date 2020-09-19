@@ -17,7 +17,7 @@ def load_library(emoticons)
     sorted_list[feeling][:japanese] << emotes[1]
   end
 end
-binding.pry
+
 def get_japanese_emoticon(emoticons, eng_emote)
   # code goes here
 end

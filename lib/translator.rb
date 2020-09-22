@@ -18,11 +18,21 @@ def load_library(emoticons)
   end
 end
 
-def get_japanese_emoticon(emoticons, eng_emote)
-  # code goes here
+def get_english_meaning(emoticons, jap_emote)
+  load_library(emoticons)
+  list = load_library(emoticons)
+  answer = ""
+  if list.select {|feeling, lang| lang.value?(jap_emote)}
+    return feeling
+    else 
+      p "Sorry, that emoticon cannot be found"
+    end
+  end
 end
 
-def get_english_meaning(emoticons, jap_emote)
-  # code goes here
+def get_japanese_emoticon(emoticons, eng_emote)
+  load_library(emoticons)
+  list = load_library(emoticons)
+  
 end
 

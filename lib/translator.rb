@@ -21,7 +21,7 @@ end
 def get_english_meaning(emoticons, jap_emote)
   load_library(emoticons)
   list = load_library(emoticons)
-  list.select |feeling, lang|
+  list.select do |feeling, lang|
     if lang.value?(jap_emote)
       return feeling
     end
@@ -31,4 +31,9 @@ end
 def get_japanese_emoticon(emoticons, eng_emote)
   load_library(emoticons)
   list = load_library(emoticons)
+  list.select do |feeling, lang|
+    if lang.value?(eng_emote)
+      return lang[:japanese]
+    end
+  end
 end

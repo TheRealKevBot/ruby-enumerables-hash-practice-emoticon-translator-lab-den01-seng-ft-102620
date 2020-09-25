@@ -19,6 +19,11 @@ def load_library(emoticons)
 end
 
 def get_english_meaning(emoticons, jap_emote)
+<<<<<<< HEAD
+=======
+  emoticons = YAML.load_file('./lib/emoticons.yml')
+  load_library(emoticons)
+>>>>>>> a6064e75045ce987f17112b3f1bce9cb69b666d9
   answer = ""
   list = load_library(emoticons)
   list.select do |feeling, lang|
@@ -33,6 +38,11 @@ def get_english_meaning(emoticons, jap_emote)
 end
 
 def get_japanese_emoticon(emoticons, eng_emote)
+<<<<<<< HEAD
+=======
+  emoticons = YAML.load_file('./lib/emoticons.yml')
+  load_library(emoticons)
+>>>>>>> a6064e75045ce987f17112b3f1bce9cb69b666d9
   answer = ""
   list = load_library(emoticons)
   list.select do |feeling, lang|
